@@ -1,0 +1,33 @@
+a {
+  transition: background-size 0.3s ease-in, color 0.3s ease-in;
+}
+
+p a,
+a.link-underline {
+  background-image: linear-gradient(to bottom, $gray-100 0%, $gray-100 100%);
+  background-position: 0 110%;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  border-bottom: 2px solid $gray-100;
+  padding: 2px 1px 0 0;
+
+  &:hover {
+    background-size: 100% 90%;
+    color: $black;
+    outline: 0;
+  }
+
+  .bg-white &,
+  .bg-light &,
+  .bg-primary &,
+  .text-bg-light &,
+  .text-bg-primary & {
+    background-image: linear-gradient(to bottom, $gray-800 0%, $gray-800 100%);
+    border-color: $gray-700;
+    color: $black;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

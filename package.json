@@ -1,0 +1,36 @@
+{
+  "name": "focus",
+  "version": "2.3.0",
+  "description": "Focus is a Bootstrap theme for creative people.",
+  "author": "webvy",
+  "browserslist": [
+    ">= 0.5%",
+    "last 2 major versions",
+    "not dead",
+    "Chrome >= 60",
+    "Firefox >= 60",
+    "Firefox ESR",
+    "iOS >= 12",
+    "Safari >= 12",
+    "not Explorer <= 11"
+  ],
+  "scripts": {
+    "clean": "del-cli dist",
+    "purgecss": "purgecss -c purgecss.config.js -o dist/assets/css/",
+    "build": "npm run clean && eleventy && npm run purgecss",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "autoprefixer": "^10.4.14",
+    "del-cli": "^5.0.0",
+    "eleventy-sass": "^2.2.1",
+    "postcss": "^8.4.24",
+    "purgecss": "^5.0.0"
+  },
+  "dependencies": {
+    "@midzer/tobii": "^2.5.0",
+    "bootstrap": "^5.3.0"
+  }
+}
